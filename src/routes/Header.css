@@ -1,0 +1,41 @@
+header {
+    position: relative;
+    padding: .3em .5em;
+}
+header:after {
+    content: '';
+    display: block;
+    clear: both;
+}
+header > h1 {
+    float: left;
+    margin: 0 0 0 .2em;
+    color: #ec5900;
+    font-size: 1.2em;
+    font-weight: 900;
+}
+header > nav {
+    float: right;
+}
+header > nav ul {
+    margin: 0;
+}
+header > nav li {
+    display: inline-block;
+    font-size: 1em;
+}
+header > nav li > a {
+    display: inline-block;
+    margin: 0 .5em;
+    color: #886c0b;
+    font-size: .7em;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-weight: 900;
+}
+header > nav li > a.active {
+    color: #52af00;
+}
+header > nav li > a > svg {
+    margin: 0 .2em 0 0;
+}

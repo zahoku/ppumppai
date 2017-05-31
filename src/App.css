@@ -1,0 +1,69 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosanskr.css);
+
+
+
+
+
+body {
+  background: #e6cc00;
+}
+
+
+
+
+
+
+
+.App {
+  font-family: ‘Noto Sans KR’;
+  color: #928201;
+}
+
+.App .contents {
+}
+.App .content > section {
+}
+.App .contents .header {
+  position: relative;
+  height: 2.3em;
+  background: #504931;
+}
+.App .contents .header:after {
+  content: '';
+  display: block;
+  clear: both;
+}
+.App .contents .header h1 {
+  float: left;
+  font-size: 1em;
+  margin: .4em 0 0 .5em;
+  color: #e6cc00;
+}
+.App .contents .header button {
+  float: right;
+}
+
+/*react-toolbox override*/
+button._29RI9 {
+  background: #fff !important;
+}
+
+
+
+/*form*/
+.writeFromType1 {
+  padding: 0 1em;
+}
+.confirmArea {
+  text-align: right;
+}
+
+.confirmArea button {
+  margin-left: .5em;
+}
+
+/*table*/
+table {
+  width: 100%;
+}
+
