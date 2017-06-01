@@ -23,7 +23,7 @@ const propTypes = {
     place: PropTypes.string,
     date: PropTypes.string,
     time: PropTypes.object,
-    discription: PropTypes.string
+    description: PropTypes.string
 };
 
 // const defaultPropTypes = {
@@ -33,7 +33,7 @@ const propTypes = {
 //     place: '',
 //     date: '',
 //     time: '',
-//     discription: ''
+//     description: ''
 // }
 
 class MeetingForm extends Component {
@@ -46,19 +46,18 @@ class MeetingForm extends Component {
             place: this.props.place,
             date: this.props.date,
             time: this.props.time,
-            discription: this.props.discription,
+            description: this.props.description,
             searchFriendList: []
         }
         this.handleCreate = this.handleCreate.bind(this);
     }
     handleChange (name, value) {
-        console.log(name);
         this.setState({...this.state, [name]: value})
     }
     handleSearchFriends () {
-        CONST.GOOGLE_SEARCH_FRIENDS;
     }
-    handleCancle () {
+
+    handleCancel() {
 
     }
     handleCreate () {
@@ -72,7 +71,8 @@ class MeetingForm extends Component {
                 </div>
                 <div className="writeFromType1">
                     <Input label="Name" type="text" name="title" value={this.state.title} onChange={this.handleChange.bind(this, 'title')} />
-                    <Input label="Discription" type="text" name="discription" multiline={true} value={this.state.discription} onChange={this.handleChange.bind(this, 'discription')} />
+                    <Input label="description" type="text" name="description" multiline={true}
+                           value={this.state.description} onChange={this.handleChange.bind(this, 'description')}/>
                     <Input label="Place" type="text" name="place" value={this.state.place} onChange={this.handleChange.bind(this, 'place')} />
                     <DatePicker
                         label='Meeting Date'
@@ -94,7 +94,7 @@ class MeetingForm extends Component {
                     />
                     <List    />
                     <div className="confirmArea">
-                        <Button onClick={this.handleCancle} label='Cancel' accent flat />
+                        <Button onClick={this.handleCancel} label='Cancel' accent flat/>
                         <Button onClick={this.handleCreate} className="confirm" label='Create' accent flat primary />
                     </div>
                 </div>
@@ -114,7 +114,7 @@ const mapStateToProps = (state) => {
         place: state.meeting.place,
         date: state.meeting.date,
         time: state.meeting.time,
-        discription: state.meeting.discription,
+        description: state.meeting.description,
     }
 }
 

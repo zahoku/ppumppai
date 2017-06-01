@@ -2,12 +2,12 @@ import * as types from '../actions/ActionTypes';
 
 const initialState = {
     id: '',
-    title: 'Meeting Name',
+    title: '',
     friends: [],
     place: '',
     date: '',
     time: new Date(),
-    discription: ''
+    description: ''
 }
 
 export default function meeting (state = initialState, action) {
