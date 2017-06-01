@@ -7,6 +7,7 @@ import * as actions from '../actions';
 
 class Login extends Component {
     render() {
+        console.log('render login')
         let onFailureGAPI = function (googleObject) {
             console.log(googleObject);
             // this.props.handleLogin();
