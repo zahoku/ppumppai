@@ -12,7 +12,7 @@ const isAuthenticated = () => {
     return returnValue;
 };
 
-const PRIVATE_ROOT = '/';
+// const PRIVATE_ROOT = '/';
 const PUBLIC_ROOT = '/login';
 
 const AuthRoute = ({component, ...props}) => {
@@ -40,7 +40,11 @@ const AuthRoute = ({component, ...props}) => {
         //     //If the route is public, the user may proceed.
         //     return <Route { ...props } component={ component } />;
         // }
-        return <Redirect to={PUBLIC_ROOT}/>;
+        if (props.location.pathname === PUBLIC_ROOT) {
+            return <Route {...props} component={component}/>;
+        } else {
+            return <Redirect to={PUBLIC_ROOT}/>;
+        }
     }
 };
 
